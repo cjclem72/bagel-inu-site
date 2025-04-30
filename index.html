@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,10 +61,47 @@
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
+    .gallery figure {
+      margin: 0 0 2rem 0;
+      text-align: center;
+      position: relative;
+    }
     .gallery img {
       width: 100%;
       border-radius: 16px;
-      margin-bottom: 1rem;
+      transition: transform 0.4s ease, box-shadow 0.3s ease;
+      animation: memePop 6s ease-in-out infinite;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .tooltip {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #222;
+      color: #fff;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .gallery figure:hover .tooltip {
+      opacity: 1;
+    }
+    .gallery figcaption {
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+      color: #444;
+    }
+    @keyframes memePop {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.025); }
     }
     footer {
       text-align: center;
@@ -99,18 +135,42 @@
   <section>
     <h2>Visuals</h2>
     <div class="gallery">
-      <img src="image1.png" alt="Bagel Inu Skateboarding" />
-      <img src="image2.png" alt="Bagels Over Bears" />
-      <img src="image3.png" alt="Breakfast of Legends" />
+      <figure>
+        <span class="tooltip">Rolling into Solana like a boss</span>
+        <img src="image1.png" alt="Bagel Inu Skateboarding" />
+        <figcaption>NO RUGS. JUST ROLLS.</figcaption>
+      </figure>
+      <figure>
+        <span class="tooltip">Fighting FUD with carbs</span>
+        <img src="image2.png" alt="Bagels Over Bears" />
+        <figcaption>BAGELS OVER BEARS</figcaption>
+      </figure>
+      <figure>
+        <span class="tooltip">Start your portfolio with Bagel Flakes</span>
+        <img src="image3.png" alt="Breakfast of Legends" />
+        <figcaption>BREAKFAST OF LEGENDS</figcaption>
+      </figure>
     </div>
   </section>
 
   <section>
     <h2>Meme Gallery</h2>
     <div class="gallery">
-      <img src="meme1.png" alt="Bagel Inu Meme 1" />
-      <img src="meme2.png" alt="Bagel Inu Meme 2" />
-      <img src="meme3.png" alt="Bagel Inu Meme 3" />
+      <figure>
+        <span class="tooltip">When the carbs hit and you 2x</span>
+        <img src="meme1.png" alt="Bagel Inu Meme 1" />
+        <figcaption>“When the carbs hit and $BAGEL pumps.”</figcaption>
+      </figure>
+      <figure>
+        <span class="tooltip">Buy the dip. Eat a bagel.</span>
+        <img src="meme2.png" alt="Bagel Inu Meme 2" />
+        <figcaption>“Buy the dip, eat a bagel.”</figcaption>
+      </figure>
+      <figure>
+        <span class="tooltip">Fueled by cream cheese and degen dreams</span>
+        <img src="meme3.png" alt="Bagel Inu Meme 3" />
+        <figcaption>“Breakfast of degen champions.”</figcaption>
+      </figure>
     </div>
   </section>
 
