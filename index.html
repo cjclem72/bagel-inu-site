@@ -113,7 +113,7 @@
   <button onclick="document.getElementById('bg-music').play()" style="background: #fff0da; border: 2px solid #ff8c42; border-radius: 999px; padding: 8px 12px; box-shadow: 0 6px 14px rgba(0,0,0,0.15); cursor: pointer;">🎵 Play</button>
   <button onclick="document.getElementById('bg-music').pause()" style="background: #ffe4d1; border: 2px solid #d96d2d; border-radius: 999px; padding: 8px 12px; box-shadow: 0 6px 14px rgba(0,0,0,0.15); cursor: pointer;">⏸ Pause</button>
 </div>
-<audio id="bg-music" loop controls>
+<audio id="bg-music" loop>
   <source src="https://cdn.pixabay.com/audio/2023/07/12/audio_1d7fd93d64.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
@@ -187,10 +187,13 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const music = document.getElementById('bg-music');
-    const playBtn = document.querySelector('[onclick*="play()"]');
-    const pauseBtn = document.querySelector('[onclick*="pause()"]');
+    const clickSound = new Audio('https://cdn.pixabay.com/download/audio/2023/03/26/audio_48a7e6a3cf.mp3?filename=click-pop-1-189276.mp3');
 
-    if (playBtn && pauseBtn && music) {
+    // Update play/pause buttons to use these event listeners
+    const playBtn = document.querySelector('button[onclick*="play()"]');
+    const pauseBtn = document.querySelector('button[onclick*="pause()"]');
+
+    if (music && playBtn && pauseBtn) {
       playBtn.addEventListener('click', () => {
         music.play();
       });
@@ -199,7 +202,6 @@
       });
     }
 
-    const clickSound = new Audio('https://cdn.pixabay.com/download/audio/2023/03/26/audio_48a7e6a3cf.mp3?filename=click-pop-1-189276.mp3');
     document.querySelectorAll('.gallery img').forEach(img => {
       img.addEventListener('click', () => {
         clickSound.currentTime = 0;
@@ -211,7 +213,6 @@
 
 
 </html>
-
 
 
   
