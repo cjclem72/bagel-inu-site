@@ -1,11 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Bagel Inu</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$BAGEL — No Rug. Just Roll.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      cursor: url('https://cur.cursors-4u.net/food/foo-4/foo337.cur'), auto;
+      animation: cursorWiggle 1.5s infinite alternate;
+      background-image: url('https://www.transparenttextures.com/patterns/bagel.png');
+      background-color: #fff5e1;
+    }
+    header {
+      animation: fadeSlideDown 1.2s ease-out;
+      background: #ffcf7e;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+    section {
+      padding: 1.5rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .gallery figure {
+      margin: 0 0 2rem 0;
+      text-align: center;
+      position: relative;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.4s ease, box-shadow 0.3s ease;
+      animation: memePop 6s ease-in-out infinite;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .gallery figcaption {
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+      color: #444;
+    }
+    .buy-button {
+      display: inline-block;
+      background-color: #ff7f50;
+      color: white;
+      font-weight: bold;
+      padding: 0.75rem 1.5rem;
+      margin: 1rem auto 2rem auto;
+      border: none;
+      border-radius: 999px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      animation: pulse 2s infinite;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.08);
+      }
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 2rem 1rem;
+      color: #666;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeSlideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes floatMusic {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes cursorWiggle {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(5deg); }
+    }
+    .fixed-contract {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      position: fixed;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      padding: 0.5rem;
+      background: rgba(255, 255, 255, 0.9);
+      z-index: 999;
+    }
+    .copy-button {
+      background: #ffcf7e;
+      border: 1px solid #ccc;
+      padding: 4px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-left: 8px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Bagel Inu</h1>
-  <p>Images included in the zip.</p>
+  <audio controls autoplay loop style="position: fixed; top: 40px; left: 20px; z-index: 999; animation: floatMusic 3s ease-in-out infinite; background: #fff0da; border: 2px solid #ff8c42; border-radius: 999px; padding: 8px 12px; box-shadow: 0 6px 14px rgba(0,0,0,0.15); transition: transform 0.3s ease;"">
+    <source src="https://cdn.pixabay.com/audio/2023/07/12/audio_1d7fd93d64.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <header>
+    <h1>$BAGEL</h1>
+    <p>No Rugs. Just Rolls. 🥯🛹</p>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>$BAGEL is the carb-loaded memecoin of the century. No rugs, only rolls. Born to beat the bears and fuel degens with unstoppable breakfast energy.</p>
+    <div style="text-align: center;">
+      <a href="https://pump.fun" target="_blank" class="buy-button">Buy $BAGEL</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Meme Gallery</h2>
+    <div class="gallery">
+      <figure>
+        <img src="image1.png" alt="Meme 1" />
+        <figcaption>“Bagel Inu stays undefeated.”</figcaption>
+      </figure>
+      <figure>
+        <img src="image2.png" alt="Meme 2" />
+        <figcaption>“$BAGEL stays undefeated.”</figcaption>
+      </figure>
+      <figure>
+        <img src="image3.png" alt="Meme 3" />
+        <figcaption>“Bagel Inu smashes resistance.”</figcaption>
+      </figure>
+      <figure>
+        <img src="image4.png" alt="Meme 4" />
+        <figcaption>“KO the bears with $BAGEL.”</figcaption>
+      </figure>
+      <figure>
+        <img src="image5.png" alt="Meme 5" />
+        <figcaption>“The carb-loaded memecoin of the century.”</figcaption>
+      </figure>
+      <figure>
+        <img src="image6.png" alt="Meme 6" />
+        <figcaption>“#BagelsOverBears 💥🥯🐻”</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>TOKENOMICS</h2>
+    <p><strong>Token Supply:</strong></p>
+    <p>1,000,000,000</p>
+    <p>No Taxes, No Bullshit. It’s that simple.</p>
+  </section>
+
+  <div class="fixed-contract">
+    Contract Address: 
+    <code id="contract-address" style="background: #eee; padding: 2px 6px; border-radius: 6px;">coming soon</code>
+    <button class="copy-button" onclick="navigator.clipboard.writeText(document.getElementById('contract-address').textContent)">Copy</button>
+  </div>
+
+  <footer>
+    🥯 <strong>$BAGEL</strong> has no association with any existing brands, baked goods, or cartoon dogs. This token simply pays homage to a delicious meme we all love and recognize.<br>
+    <strong>$BAGEL</strong> is a meme coin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. The coin is completely useless and exists purely for entertainment and meme purposes only.<br>
+    &copy; 2025 Bagel Inu. Powered by pure carbs.
+  </footer>
 </body>
 </html>
