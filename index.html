@@ -39,10 +39,10 @@
       width: 100%;
       border-radius: 16px;
       transition: transform 0.4s ease, box-shadow 0.3s ease;
+      animation: popIn 3s infinite ease-in-out;
     }
     .gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      animation: bounce 0.6s;
     }
     .gallery figcaption {
       font-size: 0.95rem;
@@ -89,6 +89,18 @@
       border-radius: 6px;
       cursor: pointer;
       margin-left: 8px;
+    }
+      @keyframes popIn {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+      @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
     }
   </style>
 </head>
@@ -158,5 +170,18 @@
     <strong>$BAGEL</strong> is a meme coin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. The coin is completely useless and exists purely for entertainment and meme purposes only.<br>
     &copy; 2025 Bagel Inu. Powered by pure carbs.
   </footer>
-</body>
+<script>
+  const clickSound = new Audio('https://cdn.pixabay.com/download/audio/2023/03/26/audio_48a7e6a3cf.mp3?filename=click-pop-1-189276.mp3');
+  document.querySelectorAll('.gallery img').forEach(img => {
+    img.addEventListener('click', () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  });
+</script>
+
+$1
 </html>
+
+  
+  
