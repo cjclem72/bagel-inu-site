@@ -6,14 +6,13 @@
   <title>$BAGEL — No Rug. Just Roll.</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet">
   <style>
+    
     body {
       cursor: url('https://cur.cursors-4u.net/food/foo-4/foo337.cur'), auto;
-      animation: cursorWiggle 1.5s infinite alternate;
       background-image: url('https://www.transparenttextures.com/patterns/bagel.png');
       background-color: #fff5e1;
     }
     header {
-      animation: fadeSlideDown 1.2s ease-out;
       background: #ffcf7e;
       padding: 2rem 1rem;
       text-align: center;
@@ -40,7 +39,6 @@
       width: 100%;
       border-radius: 16px;
       transition: transform 0.4s ease, box-shadow 0.3s ease;
-      animation: memePop 6s ease-in-out infinite;
     }
     .gallery img:hover {
       transform: scale(1.05);
@@ -64,38 +62,13 @@
       cursor: pointer;
       text-decoration: none;
       text-align: center;
-      animation: pulse 2s infinite;
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-    }
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.08);
-      }
     }
     footer {
       text-align: center;
       font-size: 0.9rem;
       padding: 2rem 1rem;
       color: #666;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes fadeSlideDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes floatMusic {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-    @keyframes cursorWiggle {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(5deg); }
     }
     .fixed-contract {
       text-align: center;
@@ -120,7 +93,7 @@
   </style>
 </head>
 <body>
-  <audio controls autoplay loop style="position: fixed; top: 40px; left: 20px; z-index: 999; animation: floatMusic 3s ease-in-out infinite; background: #fff0da; border: 2px solid #ff8c42; border-radius: 999px; padding: 8px 12px; box-shadow: 0 6px 14px rgba(0,0,0,0.15); transition: transform 0.3s ease;"">
+  <audio controls autoplay loop style="position: fixed; top: 40px; left: 20px; z-index: 999; background: #fff0da; border: 2px solid #ff8c42; border-radius: 999px; padding: 8px 12px; box-shadow: 0 6px 14px rgba(0,0,0,0.15);">
     <source src="https://cdn.pixabay.com/audio/2023/07/12/audio_1d7fd93d64.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
